@@ -40,7 +40,7 @@ open Browser.Types
 /// and `maxIter` is always greater than or equal to 0. You can also assume that
 /// `xMin` is always less than `xMax`, and `yMin` is always less than `yMax`.
 let computeMandelbrot width height maxIter xMin xMax yMin yMax =
-  failwith "Implement"
+  failwith "Implement" // REMOVE this line when you implement your own code
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Do not modify below unless you know what you are doing.
