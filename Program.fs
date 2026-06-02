@@ -1,4 +1,4 @@
-﻿module CS220.Program
+module CS220.Program
 
 open System
 open Giraffe
@@ -13,7 +13,7 @@ let js (path: string): HttpHandler =
   fun (_next: HttpFunc) (ctx: HttpContext) ->
     task {
         ctx.SetContentType "text/javascript"
-        return! ctx.WriteFileStreamAsync (false, path, None, None)
+        return! ctx.WriteFileStreamAsync(false, path, None, None)
     }
 
 let webApp =
@@ -31,7 +31,7 @@ let configureApp (app: IApplicationBuilder) =
      .UseGiraffe(webApp)
 
 let configureServices (services: IServiceCollection) =
-  services.AddGiraffe () |> ignore
+  services.AddGiraffe() |> ignore
 
 [<EntryPoint>]
 let main _args =
